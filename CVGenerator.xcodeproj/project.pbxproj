@@ -26,6 +26,7 @@
 		1E8352692561E7D100F9F45D /* CoreXLSX in Frameworks */ = {isa = PBXBuildFile; productRef = 1E8352682561E7D100F9F45D /* CoreXLSX */; };
 		1E83528C2561EF2400F9F45D /* XMLCoder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "XMLCoder::XMLCoder::Product" /* XMLCoder.framework */; };
 		1E83528D2561EF2400F9F45D /* ZIPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "ZIPFoundation::ZIPFoundation::Product" /* ZIPFoundation.framework */; };
+		1E83528F2561F63400F9F45D /* CoreXLSX in Frameworks */ = {isa = PBXBuildFile; productRef = 1E83528E2561F63400F9F45D /* CoreXLSX */; };
 		1E8526A023ECC6E500F8BA39 /* CVBasicLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E85269F23ECC6E500F8BA39 /* CVBasicLogger.swift */; };
 		1E8526A623ECD8F300F8BA39 /* String+CVMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8526A523ECD8F300F8BA39 /* String+CVMain.swift */; };
 		1E8526A823ECD95000F8BA39 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8526A723ECD95000F8BA39 /* main.swift */; };
@@ -68,9 +69,6 @@
 		OBJ_105 /* CVCli.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* CVCli.swift */; };
 		OBJ_132 /* CVGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* CVGeneratorTests.swift */; };
 		OBJ_133 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* XCTestManifests.swift */; };
-		OBJ_135 /* CoreXLSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CoreXLSX::CoreXLSX::Product" /* CoreXLSX.framework */; };
-		OBJ_136 /* ZIPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "ZIPFoundation::ZIPFoundation::Product" /* ZIPFoundation.framework */; };
-		OBJ_137 /* XMLCoder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "XMLCoder::XMLCoder::Product" /* XMLCoder.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,27 +78,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = "CVGenerator::CVGenerator";
 			remoteInfo = CVGenerator;
-		};
-		1E85269B23ECC64A00F8BA39 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "CoreXLSX::CoreXLSX";
-			remoteInfo = CoreXLSX;
-		};
-		1E85269C23ECC64A00F8BA39 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "ZIPFoundation::ZIPFoundation";
-			remoteInfo = ZIPFoundation;
-		};
-		1E85269D23ECC64A00F8BA39 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "XMLCoder::XMLCoder";
-			remoteInfo = XMLCoder;
 		};
 		1E85269E23ECC64B00F8BA39 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -161,9 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_135 /* CoreXLSX.framework in Frameworks */,
-				OBJ_136 /* ZIPFoundation.framework in Frameworks */,
-				OBJ_137 /* XMLCoder.framework in Frameworks */,
+				1E83528F2561F63400F9F45D /* CoreXLSX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,11 +307,11 @@
 			);
 			dependencies = (
 				OBJ_138 /* PBXTargetDependency */,
-				OBJ_139 /* PBXTargetDependency */,
-				OBJ_140 /* PBXTargetDependency */,
-				OBJ_141 /* PBXTargetDependency */,
 			);
 			name = CVGeneratorTests;
+			packageProductDependencies = (
+				1E83528E2561F63400F9F45D /* CoreXLSX */,
+			);
 			productName = CVGeneratorTests;
 			productReference = "CVGenerator::CVGeneratorTests::Product" /* CVGeneratorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -605,21 +580,6 @@
 			isa = PBXTargetDependency;
 			target = "CVGenerator::CVGenerator" /* CVGenerator */;
 			targetProxy = 1E85269A23ECC64A00F8BA39 /* PBXContainerItemProxy */;
-		};
-		OBJ_139 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "CoreXLSX::CoreXLSX" /* CoreXLSX */;
-			targetProxy = 1E85269B23ECC64A00F8BA39 /* PBXContainerItemProxy */;
-		};
-		OBJ_140 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "ZIPFoundation::ZIPFoundation" /* ZIPFoundation */;
-			targetProxy = 1E85269C23ECC64A00F8BA39 /* PBXContainerItemProxy */;
-		};
-		OBJ_141 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "XMLCoder::XMLCoder" /* XMLCoder */;
-			targetProxy = 1E85269D23ECC64A00F8BA39 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1179,6 +1139,11 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		1E8352682561E7D100F9F45D /* CoreXLSX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E8352672561E7D100F9F45D /* XCRemoteSwiftPackageReference "CoreXLSX" */;
+			productName = CoreXLSX;
+		};
+		1E83528E2561F63400F9F45D /* CoreXLSX */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1E8352672561E7D100F9F45D /* XCRemoteSwiftPackageReference "CoreXLSX" */;
 			productName = CoreXLSX;
