@@ -1,0 +1,229 @@
+% ------------------------------------------------------
+% some useful links
+% https://www.overleaf.com/learn/latex/Font_sizes,_families,_and_styles#Font_styles
+% https://www.overleaf.com/learn/latex/Sections_and_chapters
+% https://www.overleaf.com/learn/latex/Headers_and_footers
+% https://www.overleaf.com/learn/latex/Page_size_and_margins
+% https://fr.overleaf.com/learn/latex/Paragraphs_and_new_lines
+
+% ------------------------------------------------------
+% documentclass and package declaration
+\documentclass[a4paper,11pt]{article}
+% allow accented characters use in the selected font
+\usepackage[T1]{fontenc}
+% encoding
+\usepackage[utf8x]{inputenc}
+% title sections used for Strength, Education, Experience etc.
+\usepackage{titlesec}
+% predefined colors
+\usepackage[dvipsnames]{xcolor}
+% content size
+\usepackage[inner=2cm,outer=2cm,footskip=1cm,textheight=26.5cm]{geometry} % showframe
+% page header, footer
+\usepackage{fancyhdr}
+% use tcolorbox to break the minipage (https://tex.stackexchange.com/questions/271410/how-to-make-minipage-spanning-multiple-pages)
+\usepackage[most,breakable]{tcolorbox}
+% linkedin, email, tel
+\usepackage[hidelinks]{hyperref}
+
+% symbols: http://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf
+% \faWhatsapp, \faEnvelope, \faTwitter, \faComments, \faMapMarker, \faLinkedinSquare, \faGit, \faGithub, \faGithubSquare
+\usepackage{fontawesome}
+% dashed lines
+\usepackage{dashrule}
+% provides \isempty test
+\usepackage{xifthen}
+% allow to have 2 columns spaning multiple pages
+\usepackage{paracol}
+\usepackage{enumitem}
+\setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
+\usepackage{scrextend}
+
+% ------------------------------------------------------
+% Set main fonts
+%\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont{Helvetica Light}
+%\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Helvetica Neue Light}
+% use system font
+\renewcommand\familydefault{\sfdefault} 
+
+
+% ------------------------------------------------------
+% define custom colors:
+\definecolor{gray66}{HTML}{666666}
+\definecolor{gray33}{HTML}{333333}
+\definecolor{text}{HTML}{010101}
+
+
+% ------------------------------------------------------
+% style: sections
+% sections are: profile, experiences, education etc..  
+\titleformat
+{\section} % command
+[display] % shape
+{\bfseries\Large\color{MidnightBlue}} % format
+{} % label
+{-1ex} % sep
+{} % before-code
+[
+    \vspace{-1ex}
+    \color{MidnightBlue}\rule{\textwidth}{0.8pt}
+    \vspace{-3ex}
+] % after-code
+
+% ------------------------------------------------------
+% style: experience
+% #1: position / title
+% #2: company name
+% #3: from-to
+% #4: location
+% #5: description
+% #6: techno
+% #7: company desc
+% #8: from m/yyyy
+% #9: to m/yyyy
+\newcommand{\experience}[9]{{
+  \vspace{0ex}
+  {{
+    \flushleft{\bfseries\Large\color{text} #1}
+  }} % role / position (Solution architect)
+  \vspace{-0.3ex}
+  {{
+    \flushleft{\bfseries\large\color{gray66} #2}
+  }} % company
+  \vspace{-0.5ex}
+  \color{gray33}
+  % from-to Geneva
+  {{
+    \flushleft\small{\faCalendar \ #3 \faMapMarker \ #4}\flushleft
+  }}
+  \vspace{0ex}
+  {{ % experience details
+    #5
+  }}
+  % technos - can be empty:
+  \ifthenelse{\isempty{#6}}%
+    {} % no techno specified
+    {
+      \vspace{-0.1ex}
+      \flushleft{\slshape\footnotesize\color{gray}
+              \begin{addmargin}[1.8em]{0em}
+                   \textbf{Technologies:\ }#6
+              \end{addmargin}
+       }
+    }% show specified technos
+}}
+
+% ------------------------------------------------------
+% style: footer
+\pagestyle{fancy}
+\fancyhf{} % clears header and footer
+\fancyhfoffset[L]{0cm}%
+\fancyhfoffset[R]{0cm}%
+\cfoot{\color{gray66} \faEnvelope \ <EMAIL> |  \faPhoneSquare \ <PHONE> | \faMapMarker \ <PLACE>}
+\renewcommand{\footrulewidth}{0.2pt}
+\renewcommand{\headrulewidth}{0pt}
+
+
+% ------------------------------------------------------
+% style: language
+\newcommand{\langLevel}[2]{{
+  \vspace{-0.8ex}
+  \color{gray33}\flushleft\noindent\textbf{#1}\hfill\color{gray66}{#2}
+  \vspace{1.3ex}\color{MidnightBlue}\rule{\textwidth}{0.1pt}
+  \vspace{-3ex}
+}}
+
+% ------------------------------------------------------
+% style: certifications
+% 0: Degree
+% 1: School
+% 2: Year
+\newcommand{\certification}[3]{{
+  \color{gray33}\flushleft\textbf{#1 \faBookmarkO}\flushleft
+  \vspace{-1.2ex}
+  \color{gray66}\flushleft\small{#2}\flushleft
+  \vspace{-2.5ex}\color{MidnightBlue}\rule{\textwidth}{0.1pt}
+  \vspace{-5ex}
+}}
+
+% ------------------------------------------------------
+% style: certificate
+% 0: Name
+% 1: Certifier
+% 2: Year
+\newcommand{\certificate}[3]{{
+  \color{gray33}\flushleft\textbf{#1 \faGraduationCap}\flushleft
+  \vspace{-1.2ex}
+  \color{gray66}\flushleft\small{#2}\flushleft
+  \vspace{-2.5ex}\color{MidnightBlue}\rule{\textwidth}{0.1pt}
+  \vspace{-5ex}
+}}
+
+% ------------------------------------------------------
+% style: strength
+\newcommand{\strength}[1]{{
+  \vspace{-0.8ex}
+  \color{gray33}
+  \flushleft{\faPlusSquare \ #1}\flushleft
+  %\vspace{-2.6ex}
+}}
+
+
+% ------------------------------------------------------
+% Start document
+% ------------------------------------------------------
+\begin{document}
+  % ------------------------------------------------------
+  % title: name, jobtitle
+  \begin{center}\color{MidnightBlue}\rule{17cm}{3pt}\end{center}
+  \vspace{-1.5ex}
+  \begin{center}{\Huge \color{MidnightBlue}<NAME>}\end{center}
+  % job title
+  \begin{center}{\huge \color{gray66}<JOBTITLE>}\end{center}
+
+  % ------------------------------------------------------
+  % contact info
+  \vspace{-3.5ex}
+  \begin{center}\color{MidnightBlue}\small
+  \faEnvelope \ \href{mailto:<EMAIL>}{<EMAIL>} | \faPhoneSquare \ \href{tel:<PHONE>}{<PHONE>} | \faLinkedinSquare \ \href{https://www.linkedin.com/in/<LINKEDIN_ID>/}{<NAME>} \faGithub \ \href{https://github.com/<GITHUB>/}{<GITHUB>}
+  \end{center}
+
+  \vspace{0.5cm}
+  
+  {\color{gray33}\noindent{<SUMMARY>}}
+
+  \vspace{0.5cm}
+  
+  % ------------------------------------------------------
+  % divide the doc in 2 columns:
+  \setcolumnwidth{50mm, 11.6cm}
+  \setlength{\columnsep}{4mm}
+  \begin{paracol}{2}
+    % start of left column
+    \begin{tcolorbox}[blanker, breakable, width=\linewidth]
+
+        \section{Strengths}
+        
+        \section{Education \& Certifications}
+        
+        \section{Languages}
+
+        \section{Technologies}
+
+    \end{tcolorbox}
+    % end of left column
+    \switchcolumn
+    % ------------------------------------------------------
+    % start of right column
+    \begin{tcolorbox}[blanker, breakable, width=\linewidth]
+
+        \section{Experience}
+        
+    % end of right column
+    \end{tcolorbox}
+  % end of 2 columns section
+  \end{paracol}
+% end of doc
+\end{document}
+
