@@ -1,12 +1,5 @@
 # CVGenerator
 
-## Build the project
-
-```bash
-swift build
-
-```
-
 This program takes a [Latex](https://www.latex-project.org/) template file which defines the resume structure, load data from an Excel spreadsheet and apply the template onto the data to generate a resume in all the languages available in the datasource.
 
 ## Latex structure
