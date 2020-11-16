@@ -45,6 +45,8 @@
 		1E8352A22561FD3800F9F45D /* CVLatexPdf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E95A4DC241EDF75004E3E03 /* CVLatexPdf.swift */; };
 		1E8352A32561FD3800F9F45D /* CVDataNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2FE0A2244E4A6B001A0265 /* CVDataNormalizer.swift */; };
 		1E8352A42562027900F9F45D /* TechnologiesUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E95A4D624151608004E3E03 /* TechnologiesUtils.swift */; };
+		1E8352AB2562091000F9F45D /* template.tex in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1E8526BF23F02DF400F8BA39 /* template.tex */; };
+		1E8352AC2562091000F9F45D /* datasource1.xlsx in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1EA1814723F7520800323C1B /* datasource1.xlsx */; };
 		1E8526A023ECC6E500F8BA39 /* CVBasicLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E85269F23ECC6E500F8BA39 /* CVBasicLogger.swift */; };
 		1E8526A623ECD8F300F8BA39 /* String+CVMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8526A523ECD8F300F8BA39 /* String+CVMain.swift */; };
 		1E8526A823ECD95000F8BA39 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8526A723ECD95000F8BA39 /* main.swift */; };
@@ -81,6 +83,20 @@
 			remoteInfo = CVGeneratorTests;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1E8352AA256208AD00F9F45D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				1E8352AB2562091000F9F45D /* template.tex in CopyFiles */,
+				1E8352AC2562091000F9F45D /* datasource1.xlsx in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1E2FE0A2244E4A6B001A0265 /* CVDataNormalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVDataNormalizer.swift; sourceTree = "<group>"; };
@@ -191,8 +207,8 @@
 		OBJ_11 /* CVGeneratorTests */ = {
 			isa = PBXGroup;
 			children = (
-				1EA1814723F7520800323C1B /* datasource1.xlsx */,
 				1E8526BF23F02DF400F8BA39 /* template.tex */,
+				1EA1814723F7520800323C1B /* datasource1.xlsx */,
 				OBJ_12 /* CVGeneratorTests.swift */,
 				OBJ_13 /* XCTestManifests.swift */,
 				1E8526B123F0283E00F8BA39 /* TemplateParserTests.swift */,
@@ -296,6 +312,7 @@
 			buildPhases = (
 				OBJ_131 /* Sources */,
 				OBJ_134 /* Frameworks */,
+				1E8352AA256208AD00F9F45D /* CopyFiles */,
 			);
 			buildRules = (
 			);

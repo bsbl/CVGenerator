@@ -16,12 +16,17 @@ class CVResumeGeneratorTests: XCTestCase {
     override func setUp() {
         do {
             let source = CVSource()
-            try source.load(excelSource: "/Users/sbl/Documents/Latex/resume-genetator/CVGenerator/Tests/CVGeneratorTests/datasource1.xlsx")
+            let bundle = Bundle(for: type(of: self))
+            let xlsxPath = bundle.path(forResource: "datasource1", ofType: "xlsx")!
+            let texPath = bundle.path(forResource: "template", ofType: "tex")!
+
+            
+            try source.load(excelSource: xlsxPath)
             self.source = source
 
             let parser = try CVTemplateParser(applicationName: "solution_architect", translations: source.dataSourceVariables ?? [:], skippedSections: [])
             self.parser = parser
-            try parser.loadTemplate(template: "/Users/sbl/Documents/Latex/resume-genetator/CVGenerator/Tests/CVGeneratorTests/template.tex")
+            try parser.loadTemplate(template: texPath)
         } catch {
             print("Test failed with error: \(error).")
             XCTFail()
