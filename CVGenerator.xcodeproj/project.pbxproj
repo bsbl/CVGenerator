@@ -22,11 +22,29 @@
 
 /* Begin PBXBuildFile section */
 		1E2FE0A3244E4A6B001A0265 /* CVDataNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2FE0A2244E4A6B001A0265 /* CVDataNormalizer.swift */; };
-		1E2FE0A4244E4A6B001A0265 /* CVDataNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2FE0A2244E4A6B001A0265 /* CVDataNormalizer.swift */; };
 		1E8352692561E7D100F9F45D /* CoreXLSX in Frameworks */ = {isa = PBXBuildFile; productRef = 1E8352682561E7D100F9F45D /* CoreXLSX */; };
 		1E83528C2561EF2400F9F45D /* XMLCoder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "XMLCoder::XMLCoder::Product" /* XMLCoder.framework */; };
 		1E83528D2561EF2400F9F45D /* ZIPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "ZIPFoundation::ZIPFoundation::Product" /* ZIPFoundation.framework */; };
 		1E83528F2561F63400F9F45D /* CoreXLSX in Frameworks */ = {isa = PBXBuildFile; productRef = 1E83528E2561F63400F9F45D /* CoreXLSX */; };
+		1E8352912561FD3800F9F45D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8526A723ECD95000F8BA39 /* main.swift */; };
+		1E8352922561FD3800F9F45D /* String+CVMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8526A523ECD8F300F8BA39 /* String+CVMain.swift */; };
+		1E8352932561FD3800F9F45D /* CVCli.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* CVCli.swift */; };
+		1E8352942561FD3800F9F45D /* CVBasicLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E85269F23ECC6E500F8BA39 /* CVBasicLogger.swift */; };
+		1E8352952561FD3800F9F45D /* CVErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8526AF23EF70A600F8BA39 /* CVErrors.swift */; };
+		1E8352962561FD3800F9F45D /* CVTemplateVarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8526A923EEB80200F8BA39 /* CVTemplateVarConfig.swift */; };
+		1E8352972561FD3800F9F45D /* CVTemplateParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8526AB23EF6BB300F8BA39 /* CVTemplateParser.swift */; };
+		1E8352982561FD3800F9F45D /* CVSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8526C423F04D4700F8BA39 /* CVSource.swift */; };
+		1E8352992561FD3800F9F45D /* CVSource+Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8526AD23EF6D2700F8BA39 /* CVSource+Section.swift */; };
+		1E83529A2561FD3800F9F45D /* CVExperienceAndTechnologiesParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE86F4F23FDD78100AFA8E3 /* CVExperienceAndTechnologiesParser.swift */; };
+		1E83529B2561FD3800F9F45D /* CVLanguageParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE86F4C23F9C64800AFA8E3 /* CVLanguageParser.swift */; };
+		1E83529C2561FD3800F9F45D /* CVCerticateParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA1814E23F9922C00323C1B /* CVCerticateParser.swift */; };
+		1E83529D2561FD3800F9F45D /* CVVariablesAndStrengthsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8526D223F5F1B300F8BA39 /* CVVariablesAndStrengthsParser.swift */; };
+		1E83529E2561FD3800F9F45D /* CVExcelWorksheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA1814823F83F3900323C1B /* CVExcelWorksheet.swift */; };
+		1E83529F2561FD3800F9F45D /* Collection+CVSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA1814B23F846E500323C1B /* Collection+CVSource.swift */; };
+		1E8352A02561FD3800F9F45D /* TechnologiesOrderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBADCC6240C61D2004AA68B /* TechnologiesOrderer.swift */; };
+		1E8352A22561FD3800F9F45D /* CVLatexPdf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E95A4DC241EDF75004E3E03 /* CVLatexPdf.swift */; };
+		1E8352A32561FD3800F9F45D /* CVDataNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2FE0A2244E4A6B001A0265 /* CVDataNormalizer.swift */; };
+		1E8352A42562027900F9F45D /* TechnologiesUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E95A4D624151608004E3E03 /* TechnologiesUtils.swift */; };
 		1E8526A023ECC6E500F8BA39 /* CVBasicLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E85269F23ECC6E500F8BA39 /* CVBasicLogger.swift */; };
 		1E8526A623ECD8F300F8BA39 /* String+CVMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8526A523ECD8F300F8BA39 /* String+CVMain.swift */; };
 		1E8526A823ECD95000F8BA39 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8526A723ECD95000F8BA39 /* main.swift */; };
@@ -35,50 +53,26 @@
 		1E8526AE23EF6D2700F8BA39 /* CVSource+Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8526AD23EF6D2700F8BA39 /* CVSource+Section.swift */; };
 		1E8526B023EF70A600F8BA39 /* CVErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8526AF23EF70A600F8BA39 /* CVErrors.swift */; };
 		1E8526B423F029F100F8BA39 /* TemplateParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8526B123F0283E00F8BA39 /* TemplateParserTests.swift */; };
-		1E8526B523F02AE400F8BA39 /* String+CVMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8526A523ECD8F300F8BA39 /* String+CVMain.swift */; };
-		1E8526B623F02AE900F8BA39 /* CVCli.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* CVCli.swift */; };
-		1E8526B723F02AE900F8BA39 /* CVBasicLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E85269F23ECC6E500F8BA39 /* CVBasicLogger.swift */; };
-		1E8526B823F02AE900F8BA39 /* CVTemplateVarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8526A923EEB80200F8BA39 /* CVTemplateVarConfig.swift */; };
-		1E8526B923F02AE900F8BA39 /* CVTemplateParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8526AB23EF6BB300F8BA39 /* CVTemplateParser.swift */; };
-		1E8526BA23F02AE900F8BA39 /* CVSource+Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8526AD23EF6D2700F8BA39 /* CVSource+Section.swift */; };
-		1E8526BB23F02AE900F8BA39 /* CVErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8526AF23EF70A600F8BA39 /* CVErrors.swift */; };
 		1E8526C523F04D4700F8BA39 /* CVSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8526C423F04D4700F8BA39 /* CVSource.swift */; };
-		1E8526C623F04D4700F8BA39 /* CVSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8526C423F04D4700F8BA39 /* CVSource.swift */; };
 		1E8526CA23F4AE9200F8BA39 /* CVSourceSectionItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8526C823F4AE9200F8BA39 /* CVSourceSectionItemTests.swift */; };
 		1E8526D323F5F1B300F8BA39 /* CVVariablesAndStrengthsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8526D223F5F1B300F8BA39 /* CVVariablesAndStrengthsParser.swift */; };
-		1E8526D423F5F1B300F8BA39 /* CVVariablesAndStrengthsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8526D223F5F1B300F8BA39 /* CVVariablesAndStrengthsParser.swift */; };
 		1E95A4D724151608004E3E03 /* TechnologiesUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E95A4D624151608004E3E03 /* TechnologiesUtils.swift */; };
-		1E95A4D824151609004E3E03 /* TechnologiesUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E95A4D624151608004E3E03 /* TechnologiesUtils.swift */; };
 		1E95A4DB24184A43004E3E03 /* TechnologiesUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E95A4DA24184A43004E3E03 /* TechnologiesUtilsTests.swift */; };
 		1E95A4DD241EDF75004E3E03 /* CVLatexPdf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E95A4DC241EDF75004E3E03 /* CVLatexPdf.swift */; };
-		1E95A4DE241EDF75004E3E03 /* CVLatexPdf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E95A4DC241EDF75004E3E03 /* CVLatexPdf.swift */; };
 		1EA1814623F72D8900323C1B /* CVSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA1814423F72D8200323C1B /* CVSourceTests.swift */; };
 		1EA1814923F83F3900323C1B /* CVExcelWorksheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA1814823F83F3900323C1B /* CVExcelWorksheet.swift */; };
-		1EA1814A23F83F3900323C1B /* CVExcelWorksheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA1814823F83F3900323C1B /* CVExcelWorksheet.swift */; };
 		1EA1814C23F846E500323C1B /* Collection+CVSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA1814B23F846E500323C1B /* Collection+CVSource.swift */; };
-		1EA1814D23F846E500323C1B /* Collection+CVSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA1814B23F846E500323C1B /* Collection+CVSource.swift */; };
 		1EA1814F23F9922D00323C1B /* CVCerticateParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA1814E23F9922C00323C1B /* CVCerticateParser.swift */; };
-		1EA1815023F9922D00323C1B /* CVCerticateParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA1814E23F9922C00323C1B /* CVCerticateParser.swift */; };
 		1EBADCC7240C61D2004AA68B /* TechnologiesOrderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBADCC6240C61D2004AA68B /* TechnologiesOrderer.swift */; };
-		1EBADCC8240C61D2004AA68B /* TechnologiesOrderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBADCC6240C61D2004AA68B /* TechnologiesOrderer.swift */; };
 		1EBADCCB240C717B004AA68B /* ExperiencesPeriodsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBADCC9240C717B004AA68B /* ExperiencesPeriodsTests.swift */; };
 		1EE86F4D23F9C64800AFA8E3 /* CVLanguageParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE86F4C23F9C64800AFA8E3 /* CVLanguageParser.swift */; };
-		1EE86F4E23F9C64800AFA8E3 /* CVLanguageParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE86F4C23F9C64800AFA8E3 /* CVLanguageParser.swift */; };
 		1EE86F5023FDD78200AFA8E3 /* CVExperienceAndTechnologiesParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE86F4F23FDD78100AFA8E3 /* CVExperienceAndTechnologiesParser.swift */; };
-		1EE86F5123FDD78200AFA8E3 /* CVExperienceAndTechnologiesParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE86F4F23FDD78100AFA8E3 /* CVExperienceAndTechnologiesParser.swift */; };
 		OBJ_105 /* CVCli.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* CVCli.swift */; };
 		OBJ_132 /* CVGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* CVGeneratorTests.swift */; };
 		OBJ_133 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* XCTestManifests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1E85269A23ECC64A00F8BA39 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "CVGenerator::CVGenerator";
-			remoteInfo = CVGenerator;
-		};
 		1E85269E23ECC64B00F8BA39 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -306,7 +300,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_138 /* PBXTargetDependency */,
 			);
 			name = CVGeneratorTests;
 			packageProductDependencies = (
@@ -498,31 +491,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				1E8526B923F02AE900F8BA39 /* CVTemplateParser.swift in Sources */,
 				1E8526CA23F4AE9200F8BA39 /* CVSourceSectionItemTests.swift in Sources */,
+				1E8352A22561FD3800F9F45D /* CVLatexPdf.swift in Sources */,
+				1E8352972561FD3800F9F45D /* CVTemplateParser.swift in Sources */,
+				1E83529D2561FD3800F9F45D /* CVVariablesAndStrengthsParser.swift in Sources */,
+				1E83529F2561FD3800F9F45D /* Collection+CVSource.swift in Sources */,
 				OBJ_132 /* CVGeneratorTests.swift in Sources */,
+				1E83529B2561FD3800F9F45D /* CVLanguageParser.swift in Sources */,
+				1E83529A2561FD3800F9F45D /* CVExperienceAndTechnologiesParser.swift in Sources */,
+				1E8352942561FD3800F9F45D /* CVBasicLogger.swift in Sources */,
+				1E8352912561FD3800F9F45D /* main.swift in Sources */,
+				1E8352A02561FD3800F9F45D /* TechnologiesOrderer.swift in Sources */,
+				1E83529C2561FD3800F9F45D /* CVCerticateParser.swift in Sources */,
+				1E8352A32561FD3800F9F45D /* CVDataNormalizer.swift in Sources */,
 				1E95A4DB24184A43004E3E03 /* TechnologiesUtilsTests.swift in Sources */,
-				1E2FE0A4244E4A6B001A0265 /* CVDataNormalizer.swift in Sources */,
-				1EBADCC8240C61D2004AA68B /* TechnologiesOrderer.swift in Sources */,
-				1EE86F5123FDD78200AFA8E3 /* CVExperienceAndTechnologiesParser.swift in Sources */,
-				1EE86F4E23F9C64800AFA8E3 /* CVLanguageParser.swift in Sources */,
-				1E8526C623F04D4700F8BA39 /* CVSource.swift in Sources */,
-				1E8526B723F02AE900F8BA39 /* CVBasicLogger.swift in Sources */,
-				1EA1814D23F846E500323C1B /* Collection+CVSource.swift in Sources */,
-				1EA1815023F9922D00323C1B /* CVCerticateParser.swift in Sources */,
-				1EA1814A23F83F3900323C1B /* CVExcelWorksheet.swift in Sources */,
-				1E8526BB23F02AE900F8BA39 /* CVErrors.swift in Sources */,
+				1E8352982561FD3800F9F45D /* CVSource.swift in Sources */,
+				1E8352922561FD3800F9F45D /* String+CVMain.swift in Sources */,
 				1E8526B423F029F100F8BA39 /* TemplateParserTests.swift in Sources */,
-				1E8526B623F02AE900F8BA39 /* CVCli.swift in Sources */,
-				1E8526B523F02AE400F8BA39 /* String+CVMain.swift in Sources */,
+				1E8352952561FD3800F9F45D /* CVErrors.swift in Sources */,
 				OBJ_133 /* XCTestManifests.swift in Sources */,
-				1E8526BA23F02AE900F8BA39 /* CVSource+Section.swift in Sources */,
-				1E8526D423F5F1B300F8BA39 /* CVVariablesAndStrengthsParser.swift in Sources */,
-				1E8526B823F02AE900F8BA39 /* CVTemplateVarConfig.swift in Sources */,
-				1E95A4DE241EDF75004E3E03 /* CVLatexPdf.swift in Sources */,
+				1E8352992561FD3800F9F45D /* CVSource+Section.swift in Sources */,
+				1E8352932561FD3800F9F45D /* CVCli.swift in Sources */,
+				1E8352A42562027900F9F45D /* TechnologiesUtils.swift in Sources */,
+				1E8352962561FD3800F9F45D /* CVTemplateVarConfig.swift in Sources */,
 				1EA1814623F72D8900323C1B /* CVSourceTests.swift in Sources */,
 				1EBADCCB240C717B004AA68B /* ExperiencesPeriodsTests.swift in Sources */,
-				1E95A4D824151609004E3E03 /* TechnologiesUtils.swift in Sources */,
+				1E83529E2561FD3800F9F45D /* CVExcelWorksheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,11 +569,6 @@
 			isa = PBXTargetDependency;
 			target = "CVGenerator::CVGeneratorTests" /* CVGeneratorTests */;
 			targetProxy = 1E85269E23ECC64B00F8BA39 /* PBXContainerItemProxy */;
-		};
-		OBJ_138 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "CVGenerator::CVGenerator" /* CVGenerator */;
-			targetProxy = 1E85269A23ECC64A00F8BA39 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
