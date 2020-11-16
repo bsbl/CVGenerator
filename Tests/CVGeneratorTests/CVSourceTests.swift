@@ -15,7 +15,9 @@ class CVSourceTests: XCTestCase {
     override func setUp() {
         do {
             let source = CVSource()
-            try source.load(excelSource: "/Users/sbl/Documents/Latex/resume-genetator/CVGenerator/Tests/CVGeneratorTests/datasource1.xlsx")
+            let bundle = Bundle(for: type(of: self))
+            let xlsxPath = bundle.path(forResource: "datasource1", ofType: "xlsx")!
+            try source.load(excelSource: xlsxPath)
             self.source = source
         } catch {
             print("Test failed with error: \(error).")
