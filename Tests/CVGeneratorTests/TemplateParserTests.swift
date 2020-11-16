@@ -22,7 +22,9 @@ class TemplateParserTests: XCTestCase {
                 ]
             ], skippedSections: [])
             self.parser = parser
-            try parser.loadTemplate(template: "/Users/sbl/Documents/Latex/resume-genetator/CVGenerator/Tests/CVGeneratorTests/template.tex")
+            let bundle = Bundle(for: type(of: self))
+            let texPath = bundle.path(forResource: "template", ofType: "tex")!
+            try parser.loadTemplate(template: texPath)
         } catch {
             print("Test failed with error: \(error).")
             XCTFail()
