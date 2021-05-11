@@ -126,7 +126,7 @@ class CVSourceTests: XCTestCase {
         XCTAssertEqual(9, source?.dataSourceSections?[.experience]?["en"]?.source[0].values.count)
         XCTAssertEqual("Technical lead", source?.dataSourceSections?[.experience]?["en"]?.source[0].values[0])
         XCTAssertEqual("Company 2 • Company sector", source?.dataSourceSections?[.experience]?["en"]?.source[0].values[1])
-        XCTAssertTrue(source?.dataSourceSections?[.experience]?["en"]?.source[0].values[2].starts(with: "Nov 2018 - ") ?? false)
+        XCTAssertTrue(source?.dataSourceSections?[.experience]?["en"]?.source[0].values[2].starts(with: "Nov 2018") ?? false)
         XCTAssertEqual(2, source?.dataSourceSections?[.experience]?["en"]?.source.count)
     }
     
