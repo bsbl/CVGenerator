@@ -147,7 +147,7 @@ class CVTemplateParser: CVTemplateParserProtocol {
                     }*/
                     // ok now fill the section:
                     if skippedSections.contains(source.section) {
-                        log("Session is skipped: \(source.section)", with: .warn)
+                        log("Section is skipped: \(source.section)", with: .warn)
                         return res
                     }
                     return insertSectionContentIntoLine(line, source, lineSection)

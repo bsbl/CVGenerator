@@ -141,16 +141,22 @@ class CVExperienceAndTechnologiesParser: CVSectionSourceParser {
                         try langs.forEach {
                             // parse date from data source
                             let fromMmmYyyy = try! TechnologiesUtils.extractMonthAndYear(monthYearText: from_, throwErrorIfEmpty: true)
-                            let toMmmYyyy = try! TechnologiesUtils.extractMonthAndYear(monthYearText: to_, throwErrorIfEmpty: isLastExperienceMet)
+                            let toMmmYyyy = try TechnologiesUtils.extractMonthAndYear(monthYearText: to_, throwErrorIfEmpty: isLastExperienceMet)
+                            
                             // build the period expression and register it into the section
                             langSectionItem[$0]?.addValue(pos: 2,
                                 value: try TechnologiesUtils.buildPeriodExpression(
-                                    lang: $0, fromMonth: fromMmmYyyy.month, fromYear: fromMmmYyyy.year,
-                                    toMonth: toMmmYyyy.month, toYear: toMmmYyyy.year)
+                                    lang: $0, fromMonth: fromMmmYyyy!.month, fromYear: fromMmmYyyy!.year,
+                                    toMonth: toMmmYyyy?.month, toYear: toMmmYyyy?.year)
                             )
                             // register the from/to expressions individually
-                            langSectionItem[$0]?.addValue(pos: 7, value: "\(fromMmmYyyy.month)/\(fromMmmYyyy.year)")
-                            langSectionItem[$0]?.addValue(pos: 8, value: "\(toMmmYyyy.month)/\(toMmmYyyy.year)")
+                            langSectionItem[$0]?.addValue(pos: 7, value: "\(fromMmmYyyy!.month)/\(fromMmmYyyy!.year)")
+                            if toMmmYyyy?.month == nil || toMmmYyyy?.year == nil {
+                                langSectionItem[$0]?.addValue(pos: 8, value: "")
+                            }
+                            else {
+                                langSectionItem[$0]?.addValue(pos: 8, value: "\(toMmmYyyy!.month)/\(toMmmYyyy!.year)")
+                            }
                         }
                     }
                     else {

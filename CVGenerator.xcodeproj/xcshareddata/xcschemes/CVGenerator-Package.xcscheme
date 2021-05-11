@@ -62,7 +62,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "--xls=/Users/sbl/Dropbox/Divers/Job/CV-BEL_Sebastien_2020.xlsx"
+            argument = "--xls=&quot;/excel_file.xlsx&quot;"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
@@ -70,7 +70,7 @@
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "--tex=/Users/sbl/Documents/Latex/resume-genetator/CVGenerator/seb-template.tex"
+            argument = "--tex=seb-template.tex"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument

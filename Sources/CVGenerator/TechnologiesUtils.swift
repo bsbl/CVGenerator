@@ -56,11 +56,16 @@ class TechnologiesUtils {
         return date
     }
     
-    static func buildPeriodExpression(lang: String, fromMonth: Int, fromYear: Int, toMonth: Int, toYear: Int) throws -> String {
+    static func buildPeriodExpression(lang: String, fromMonth: Int, fromYear: Int, toMonth: Int?, toYear: Int?) throws -> String {
         let from = try formatDate(lang: lang, month: fromMonth, year: fromYear)
-        let to = try formatDate(lang: lang, month: toMonth, year: toYear)
-        ///TODO SBL: configurable period format
-        return "\(from) - \(to)"
+        if toMonth == nil || toYear == nil {
+            return from
+        }
+        else {
+            let to = try formatDate(lang: lang, month: toMonth!, year: toYear!)
+            ///TODO SBL: configurable period format
+            return "\(from) - \(to)"
+        }
     }
     
     enum DateType {
@@ -69,7 +74,9 @@ class TechnologiesUtils {
     }
     
     static func monthYearToDate(_ mmm_slash_YYYY: String, type: DateType) throws -> Date {
-        let mmmYYYY = try extractMonthAndYear(monthYearText: mmm_slash_YYYY, throwErrorIfEmpty: true)
+        guard let mmmYYYY = try extractMonthAndYear(monthYearText: mmm_slash_YYYY, throwErrorIfEmpty: false) else {
+            return Date()
+        }
         let firstDayOfMonth = try getDate(month: mmmYYYY.month, year: mmmYYYY.year)
         switch type {
         case .from:
@@ -81,16 +88,12 @@ class TechnologiesUtils {
     
     /// If `throwErrorIfEmpty` is true then `dataError` is thrown
     /// otherwise, the current month and year is returned.
-    static func extractMonthAndYear(monthYearText: String, throwErrorIfEmpty: Bool) throws -> (month: Int, year: Int) {
+    static func extractMonthAndYear(monthYearText: String, throwErrorIfEmpty: Bool) throws -> (month: Int, year: Int)? {
         if monthYearText == "" {
             if throwErrorIfEmpty {
                 throw CVError.dataError("mmm/YYYY is empty!")
             }
-            else {
-                let now = Date()
-                return (month: Calendar.current.component(Calendar.Component.month, from: now),
-                        year: Calendar.current.component(Calendar.Component.year, from: now))
-            }
+            return nil
         }
         else {
             let monthsYearFrom = monthYearText.split(separator: "/")
